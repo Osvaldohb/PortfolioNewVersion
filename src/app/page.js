@@ -14,37 +14,37 @@ export default function Home() {
       "A high-performance JavaScript runtime I use to build scalable backend services and APIs.",
   },
   {
-    imgId: "2",
+    imgId: "12",
     Name: "Express.js",
     Description:
       "A minimal and flexible web framework for Node.js that helps me create robust API architectures.",
   },
   {
-    imgId: "3",
+    imgId: "13",
     Name: "PostgreSQL",
     Description:
       "A powerful open-source relational database I use for structured, reliable data storage.",
   },
   {
-    imgId: "4",
+    imgId: "14",
     Name: "MongoDB",
     Description:
       "A NoSQL document database I use to handle flexible and dynamic data structures.",
   },
   {
-    imgId: "6",
+    imgId: "15",
     Name: "JWT",
     Description:
       "A secure method I use to handle authentication and authorization via token-based systems.",
   },
   {
-    imgId: "8",
+    imgId: "16",
     Name: "REST & GraphQL",
     Description:
       "API paradigms I use to design clear and scalable communication between frontend and backend.",
   },
   {
-    imgId: "10",
+    imgId: "17",
     Name: "Spring Boot",
     Description:
       "A Java-based framework I use for building production-ready backend applications with ease.",
@@ -143,9 +143,9 @@ export default function Home() {
       <main className=" flex justify-center items-center px-16  h-screen bg-white hero">
           <section className="flex flex-col  text-center gap-6 items-center ">
             <h1 className="ApperAnimation text-xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900">Full Stack Developer <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
-  Osvaldo Santillan
-</span>
- </h1>
+                  Osvaldo Santillan
+                </span>
+            </h1>
           <h1 className="SideAnimation text-xl sm:text-2xl md:text-4xl font-bold tracking-tight text-gray-900">
             Elevating digital experiences through  clean design and modern code.
           </h1>
@@ -157,65 +157,57 @@ export default function Home() {
        
       </main>
 
-    <section className="py-20 px-6 bg-gray-50 text-center  cardZone">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
-          Technologies I use to build elegant web experiences
-        </h2>
-        <div className="flex justify-center relative ">
-          {technologies.map((tech, index) => (
-            <div 
-            key={index} 
-            className={`absolute transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? 'animate-fade-in' : 'opacity-0 z-0'
-          }`}
-            id="techCard"
-            >
-              <CardTech
-                
-                imgId={tech.imgId}
-                Name={tech.Name}
-                Description={tech.Description}
-              />
-            </div>
-          ))}
-
-
-
-
-          
+<section className="py-20 px-6 text-center flex flex-col  xl:flex-row justify-center items-start gap-6">
+  <article className="min-h-[500px] w-full xl:w-1/2">
+    <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
+      Technologies I use to build elegant web experiences
+    </h2>
+    <div className="relative container__cards h-[350px]">
+      {technologies.map((tech, index) => (
+        <div 
+          key={index} 
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000 ease-in-out ${
+          index === currentIndex ? 'animate-fade-in' : 'opacity-0 z-0'
+        } w-full sm:w-max`}
+        >
+          <CardTech
+            imgId={tech.imgId}
+            Name={tech.Name}
+            Description={tech.Description}
+          />
         </div>
+      ))}
+    </div>
+  </article>
 
-
-
-      </section> 
-
-        {/* <section className="py-20 px-6 bg-gray-50 text-center  cardZone">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
-           Technologies that power performance and scalability
-        </h2>
-        <div className="flex justify-center relative ">
-          {technologiesBackend.map((tech, index) => (
-            <div 
-            key={index} 
-            className={`absolute transition-opacity duration-1000 ease-in-out ${
+  <article className="min-h-[500px] w-full xl:w-1/2">
+    <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
+      Technologies I use to build powerful backend systems
+    </h2>
+    <div className="relative container__cards h-[350px]">
+      {technologiesBackend.map((tech, index) => (
+        <div 
+          key={index} 
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-1000 ease-in-out ${
             index === currentIndexBackend ? 'animate-fade-in' : 'opacity-0 z-0'
-          }`}
-            id="techCard"
-            >
-              <CardTech
-                
-                imgId={tech.imgId}
-                Name={tech.Name}
-                Description={tech.Description}
-              />
-            </div>
-          ))}
-
-          
+          } w-full sm:w-max`}
+        >
+          <CardTech
+            imgId={tech.imgId}
+            Name={tech.Name}
+            Description={tech.Description}
+          />
         </div>
+      ))}
+    </div>
+  </article>
+</section>
+
+<section className="bg-amber-300 h-screen"> 
+<h1>ola</h1>
+</section>
 
 
-      </section>  */}
 
     </>
   );

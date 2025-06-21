@@ -25,7 +25,7 @@ const NavBar = () => {
 
   return (
     <>
-        <nav className='rounded-b-2xl  w-full py-6 px-6 md:px-16 fixed flex justify-between items-center glassNav'>
+        <nav className='rounded-b-2xl  w-full py-6 px-6 md:px-16 fixed flex justify-between items-center glassNav z-30'>
             <span>
                 <h1 className='text-2xl font-bold'>OsvaldoSantillan</h1>
             </span>

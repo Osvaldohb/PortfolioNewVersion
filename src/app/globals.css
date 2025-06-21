@@ -14,10 +14,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.cardZone {
-    height: 35vh;
-}
-
 .ApperAnimation {
     animation: ApperAnimation 1s ease-in-out;
 }
