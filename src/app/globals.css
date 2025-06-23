@@ -7,6 +7,10 @@ body {
     background-color: white;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .hero {
     background-image: url('../../public/bg1.jpg');
     background-size: cover;
@@ -18,6 +22,10 @@ body {
     animation: ApperAnimation 1s ease-in-out;
 }
 
+.animation-side-right {
+    animation: SideAnimationR 1.5s ease-in-out;
+}
+
 .SideAnimation {
     animation: SideAnimation 1.5s ease-in-out;
 }
@@ -26,9 +34,33 @@ body {
     animation: animate-fade-in 1.5s ease-in-out;
 }
 
+.animate-border-glow {
+    background-size: 200% 200%;
+    animation: borderGlowLoop .9s linear infinite;
+}
+
+@keyframes borderGlowLoop {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
 @keyframes SideAnimation {
     from {
         opacity: 0;
+        transform: translateX(-180px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes SideAnimationR {
+    from {
         transform: translateX(-180px);
     }
     to {
